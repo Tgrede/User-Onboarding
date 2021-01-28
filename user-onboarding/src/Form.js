@@ -21,6 +21,7 @@ export default function Form(props) {
                          name='first_name'
                          onChange={onChange}
                          value={formValues.first_name}
+                         data-cy='firstName'
                     ></input>
                </label>
                <label>Last Name:
@@ -29,6 +30,7 @@ export default function Form(props) {
                          name='last_name'
                          onChange={onChange}
                          value={formValues.last_name}
+                         data-cy='lastName'
                     ></input>
                </label>
                <label>Email:
@@ -37,6 +39,7 @@ export default function Form(props) {
                          name='email'
                          onChange={onChange}
                          value={formValues.email}
+                         data-cy='email'
                     ></input>
                </label>
                <label>Password:
@@ -45,6 +48,7 @@ export default function Form(props) {
                          name='password'
                          onChange={onChange}
                          value={formValues.password}
+                         data-cy='password'
                     ></input>
                </label>
                <label>Agree to Terms of Service?
@@ -53,6 +57,7 @@ export default function Form(props) {
                          name='tos'
                          onChange={onChange}
                          value={formValues.tos}
+                         data-cy='tos'
                     ></input>
                </label>
                <button disabled={disabled}>Submit</button>
