@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Form from './Form'
+import React, { useState, useEffect } from 'react'
+
+const initialUsers = []
+const initialFormValues = {
+  name: '',
+  email: '',
+  password: '',
+  tos: false,
+}
+
 
 function App() {
+  const [users, setUsers] = useState(initialUsers)
+  const [formValues, setFormValues] = useState(initialFormValues)
+
+  const onSubmit = () => {
+    setUsers([formValues, ...users])
+  }
+  const onChange = (name, value) => {
+    setFormValues({
+      ...formValues, [name]: value
+    })
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      test
+      <Form 
+        submit={onSubmit}
+        change={onChange}
+        formValues={formValues}
+      />
     </div>
   );
 }
