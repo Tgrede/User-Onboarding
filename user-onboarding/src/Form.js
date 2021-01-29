@@ -60,7 +60,7 @@ export default function Form(props) {
                          data-cy='tos'
                     ></input>
                </label>
-               <button disabled={disabled}>Submit</button>
+               <button data-cy='submit' disabled={disabled}>Submit</button>
                <div>
                     <div>{errors.first_name}</div>
                     <div>{errors.last_name}</div>
